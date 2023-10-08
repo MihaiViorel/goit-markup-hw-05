@@ -68,14 +68,9 @@ body {
 /* Link Behaviour */
 .current {
   color: var(--active-link);
-  padding: 32px;
-  box-shadow: inset 0px -4px 0px 0px rgba(33, 150, 243, 1);
-  position: relative;
-}
-
-.current:after {
-  position: absolute;
-  border-radius: 0 0 10px 10px;
+  padding-bottom: 30px;
+  border-bottom: 4px solid #2196f3;
+  border-radius: 2px;
 }
 
 .global-header-nav a:active,
@@ -85,6 +80,7 @@ body {
 .global-header-nav a:visited:hover,
 .global-header-nav a:visited:focus {
   color: var(--active-link);
+  
 }
 
 /* Header Contact */
@@ -580,6 +576,7 @@ body {
 
 .main-our_team-list-social-all {
   display: flex;
+  gap: 8px;
   justify-content: center;
   padding: 16px 32px 30px 32px;
 }
@@ -736,4 +733,184 @@ body {
   box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
   0px 4px 4px 0px rgba(0, 0, 0, 0.06),
   0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
+
+
+
+/* ----------------------------------------------------------------- Tema 5 -------------------------------------------------------------*/
+
+/* Javascript modal */
+
+.is-hidden {
+  visibility: hidden;
+}
+
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal:not(.is-hidden) {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.modal-box {
+  background-color: #fff;
+  width: 528px;
+  height: 581px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.close-modal-svg {
+  width: 11px;
+  height: 11px;
+}
+
+.close-modal-button {
+  position: absolute;
+  margin-left: 490px;
+  margin-bottom: 543px;
+  margin-top: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* ----------------- text overlay --------------------- */
+/* Studio */
+.what-we-do_overlay {
+  position: relative;
+  
+}
+
+.what-we-do_text-overlay {
+  position: absolute;
+  top: 224px;
+  width: 370px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(47, 48, 58, 0.8);
+  
+  
+}
+
+.what-we-do_text-overlay p {
+  margin: 0 auto;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Portofolio */
+.main-product_list-overlay_container {
+  position: relative;
+  overflow: hidden;
+}
+
+.main-product_list-overlay_container-text-overlay {
+  width: 370px;
+  height: 294px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  position: absolute;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translatey(120%);
+  transition: transform 100ms ease-in-out;
+
+}
+
+.main-product_list-products:hover .main-product_list-overlay_container-text-overlay {
+  transform: translatey(0);
+}
+
+.main-product_list-overlay_container-text-overlay p {
+  width: 80%;
+  padding-left: 25px;
+  padding-top: 45px;
+  padding-bottom: 73px;
+  color: #fff;
+}
+
+/* ---------- Transitions ------------ */
+/* Studio */
+.main-navigation-studio {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.global-header-contact-li {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.global-header-contact a[ href^="mailto"],
+.global-header-contact a[ href^="tel"] {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-hero-button:hover {
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-our_team-list-social svg {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-our_team-list-social {
+  transition-property: background-color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.regular-customers-list ul li svg{
+  transition-property: fill, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-item {
+  transition-property: background-color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Portofolio */
+.main-button_list li button {
+  transition-property: box-shadow, color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-product_list-products {
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }

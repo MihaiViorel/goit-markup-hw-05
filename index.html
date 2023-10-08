@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/styles.css">  
 </head>
 <body>
   <header class="global-header">
@@ -48,7 +48,7 @@
     <section class="main-hero">
       <div class="main-hero-container">
         <h1 class="main-hero-title">EFFECTIVE SOLUTIONS FOR <br>YOUR BUSINESS</h1>
-        <button class="main-hero-button">Request our service</button>
+        <button data-modal-open class="main-hero-button" type="button">Request our service</button>
       </div>      
     </section>
     <div>
@@ -107,13 +107,28 @@
       <h2 class="main-what_we_do">What we do</h2>
       <ul class="main-what_we_do-list">
         <li>
-          <img src="./images/Homepage/Whatwedo_1.jpg" alt="Clean Coding" width="370">
+          <div class="what-we-do_overlay">
+            <div class="what-we-do_text-overlay">
+              <p>DESKTOP APPS</p>              
+            </div>
+            <img src="./images/Homepage/Whatwedo_1.jpg" alt="Clean Coding" width="370">
+          </div>          
         </li>
         <li>
-          <img src="./images/Homepage/Whatwedo_2.jpg" alt="Mobile Responsiveness" width="370">
+          <div class="what-we-do_overlay">
+            <div class="what-we-do_text-overlay">
+              <p>MOBILE APPS</p>
+            </div>
+            <img src="./images/Homepage/Whatwedo_2.jpg" alt="Mobile Responsiveness" width="370">
+          </div>          
         </li>
         <li>
-          <img src="./images/Homepage/Whatwedo_3.jpg" alt="Beautiful Design" width="370">
+          <div class="what-we-do_overlay">
+            <div class="what-we-do_text-overlay">
+              <p>DESIGN SOLUTIONS</p>
+            </div>
+            <img src="./images/Homepage/Whatwedo_3.jpg" alt="Beautiful Design" width="370">
+          </div>          
         </li>
       </ul>
     </div>
@@ -362,6 +377,18 @@
       </div>
     </section>    
   </footer>
+  <div class="modal is-hidden" data-modal>
+    <div class="modal-content">
+      <div class="modal-box">
+        <button class="close-modal-button" data-modal-close>
+          <svg class="close-modal-svg">
+            <use href="./images/icons.svg#icon-modal-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
 </body>
 </html>
 
